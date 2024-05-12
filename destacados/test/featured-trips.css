@@ -1,0 +1,347 @@
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* border: 2px solid black; */
+  box-sizing: border-box;
+}
+.P-section-highlights {
+    width: 90%;
+    margin: 50px;
+    padding: 110px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: center; 
+}
+.main{
+  background-color: rgb(242, 242, 185);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 10px;
+  cursor: pointer;
+  position: relative;
+}
+.background-image {
+  width: 100%;
+  padding: 4% 4%;
+}
+.background-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+.text {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ position: relative;
+}
+.text h3 {
+  padding-left: 5px;
+  text-align: left;
+  width: 60%;
+  margin: 0 5px;
+}
+.text h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /*Propiedad right solo aplica para elementos con position absoluta;*/
+  right: 7%;
+  /*Propiedad transform: Se utiliza para aplicar transoformaciones ah 
+  elemento como rotaciones traslados oh escalados
+  - mueve el elemento en el eje vertical Y -30%*/
+  transform: translateY(-30%);
+  border-radius: 50%;
+  background-color: #4256ac;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 1rem;
+  color: #000088;
+  font-weight: bold;
+  }
+.opinions {
+  display: flex;
+  color: rgb(23, 23, 175);
+  align-items: center;
+  padding-right: 12.1875rem;
+}
+
+.paragraf {
+    color: rgb(23, 23, 175);
+    text-align: left;
+    padding-right: 12%;
+    margin: 7px 5px;
+}
+.div-button {
+margin: 0 auto;
+}
+.button {
+    background-color: #13236b;
+    border-radius: 16px;
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 20px; 
+    cursor: pointer; 
+    margin: 0 auto;
+}
+.button:hover {
+    background-color:  rgb(15, 15, 15);
+}
+.btn {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 300%;
+}
+.btn button{
+  margin-top: 2rem;
+  background-color: rgb(10, 10, 114);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  width: 10%;
+  border: none;
+  outline: none;
+  padding: 1rem 1rem;
+}
+.btn button:hover {
+  background-color: rgb(54, 77, 100);
+  cursor:pointer;
+}
+
+/*STYLES CART MORE INFORMATION*/
+.more-information {
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  background-color: rgb(40, 46, 102);
+  opacity: 3;
+  transition:
+  width 2s,
+  height 2s,
+  background-color 2s,
+  rotate 2s;
+  transform: translateY(-10px);
+  margin: 10px;
+  border-radius: 16px;
+  border: 2px solid rgb(36, 34, 34);
+  align-items: center;
+  padding: 10px;
+} 
+
+.more-information:hover {
+  background-color: white;
+}
+.more-information-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 220px;
+  /*Scrol vertical para que todo el contenido quepa en la caja*/
+  /* overflow-y:scroll; */
+  background-color:rgb(44, 172, 189);
+  border-radius: 16px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1px 10px;
+  border-radius: 1rem;
+  color: #000088;
+}
+.contain-add {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.contain-add h3 {
+  font-size: 16px;
+  color: #13236b;
+  width: 65%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+}
+.contain-add button {
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(39, 171, 194);
+  border-radius: 1rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.more-information #travel-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white  ;
+    width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 3%; 
+  transform: translateY(-265%);
+  border-radius: 50%;
+  background-color: #13236b;
+  overflow: hidden;
+  padding: 6px;
+}
+
+/*-------------------------------*/
+/*APLICANDO LAS MEDIA QUERYS PARA TAMAÑOS ENTRE 768PX y 576X*/
+ @media screen and (max-width: 767px){
+   .P-section-highlights {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .opinions {
+    padding-right: 4rem;
+  }
+  .more-information {
+    max-width: 100%;
+  }
+  .more-information-text{
+    height: 28vh;
+  }
+
+  .btn{
+    width: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn button {
+    width: 25%;
+    text-align: center;
+  }
+  .contain-add {
+    padding-top: 15%;
+  }
+.contain-add h3 {
+  font-size: 12px;
+  width: 70%;
+  padding: 0;
+  margin-right: 5px;
+}
+.contain-add button {
+  width: 50%;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+.more-information #travel-price {
+    width: auto;
+    transform: translateY(-430%);
+    font-size: 1rem;
+  }
+  .more-information-text {
+    font-size: 10px;
+  }
+ }
+ /*APLICANDO LAS MEDIA QUERYS PARA TAMAÑOS ENTRE 575PX 767PX*/
+@media screen and (max-width: 576px) {
+    .P-section-highlights {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .opinions {
+  padding-right: 9rem;
+  }
+  .more-information-text p{
+    font-size: 15px;
+  }
+  .more-information-text{
+    width: 100%;
+    height: 45vh;
+  }
+  .btn{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn button {
+    width: 40%;
+    text-align: center;
+  }
+  .more-information #travel-price {
+    width: auto;
+    transform: translateY(-380%);
+    font-size: 1rem;
+  }
+}
+/*APLICANDO LAS MEDIA QUERYS PARA TAMAÑOS ENTRE 768PX 1199PX*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .P-section-highlights {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .opinions {
+    padding-right: 4rem;
+  }
+  .btn{
+    width: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn button {
+    width: 20%;
+    text-align: center;
+  }
+  .contain-add {
+    padding-top: 15%;
+  }
+.contain-add h3 {
+  font-size: 12px;
+  width: 70%;
+  padding: 0;
+  margin-right: 5px;
+}
+.contain-add button {
+  width: 50%;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+.more-information {
+  max-height: 200vh;
+}
+.more-information #travel-price {
+    width: auto;
+    transform: translateY(-410%);
+    font-size: 1rem;
+  }
+  .more-information-text {
+    font-size: 11px;
+    padding: 0;
+    height: 28vh;
+  }
+}
+@media screen and (min-width: 1200px){
+  .more-information-text {
+    overflow-y: hidden;
+  }
+}

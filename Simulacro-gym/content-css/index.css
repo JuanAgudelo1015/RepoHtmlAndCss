@@ -41,7 +41,7 @@
 *::before,
 *::after {
   box-sizing: inherit;
-} */
+}
 
 body {
   margin: 0;
@@ -396,16 +396,3 @@ a:hover {
 #platforms {
   margin-top: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
